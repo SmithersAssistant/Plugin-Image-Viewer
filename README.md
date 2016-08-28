@@ -2,4 +2,12 @@
 
 An image viewer plugin for the [Smithers Assistant](https://github.com/SmithersAssistant/smithers).
 
+## Installation
+
+```
+install smithers-image-viewer
+```
+
+## Preview
+
 ![](https://d.pr/i/Ip1z+)
