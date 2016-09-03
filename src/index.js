@@ -1,4 +1,3 @@
-import React from 'react';
 import {clipboard} from 'electron';
 import {imageExists} from './helpers';
 import actions from './actions';
@@ -6,6 +5,7 @@ import actions from './actions';
 const IMAGE_COMPONENT = 'com.robinmalfait.image-viewer';
 
 export default robot => {
+  const {React} = robot.dependencies
   const {Blank} = robot.cards
   const {A} = robot.UI
 

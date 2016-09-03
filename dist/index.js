@@ -6,10 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
 var _electron = require('electron');
 
 var _helpers = require('./helpers');
@@ -25,6 +21,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var IMAGE_COMPONENT = 'com.robinmalfait.image-viewer';
 
 exports.default = function (robot) {
+  var React = robot.dependencies.React;
   var Blank = robot.cards.Blank;
   var A = robot.UI.A;
 
@@ -34,20 +31,20 @@ exports.default = function (robot) {
 
     var other = _objectWithoutProperties(_ref, ['url']);
 
-    return _react2.default.createElement(
+    return React.createElement(
       Blank,
       _extends({}, other, {
-        title: _react2.default.createElement(
+        title: React.createElement(
           A,
           { target: '_blank', href: url },
           url
         ),
         actions: (0, _actions2.default)(robot, url)
       }),
-      _react2.default.createElement(
+      React.createElement(
         'div',
         { style: { textAlign: 'center' } },
-        _react2.default.createElement('img', { style: { maxWidth: '100%' }, src: url })
+        React.createElement('img', { style: { maxWidth: '100%' }, src: url })
       )
     );
   };
