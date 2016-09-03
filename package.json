@@ -1,8 +1,13 @@
 {
   "name": "smithers-image-viewer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "An image viewer plugin for the Smithers Assistant",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SmithersAssistant/Plugin-Image-Viewer.git"
+  },
+  "homepage": "https://github.com/SmithersAssistant/Plugin-Image-Viewer",
   "keywords": [
     "smithers",
     "assistant",
