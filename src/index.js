@@ -1,13 +1,13 @@
-import {clipboard} from 'electron';
-import {imageExists} from './helpers';
+import { clipboard } from 'electron';
+import { imageExists } from './helpers';
 import actions from './actions';
 
 const IMAGE_COMPONENT = 'com.robinmalfait.image-viewer';
 
 export default robot => {
-  const {React} = robot.dependencies
-  const {Blank} = robot.cards
-  const {A} = robot.UI
+  const { React } = robot.dependencies
+  const { Blank } = robot.cards
+  const { A } = robot.UI
 
   const Image = ({ url, ...other }) => (
     <Blank
@@ -27,7 +27,7 @@ export default robot => {
     description: "View an image",
     usage: 'img <img>'
   }, (res) => {
-    const url = res.matches[1];
+    const url = res.matches[ 1 ];
     imageExists(url, (exists) => {
       if (exists) {
         robot.addCard(IMAGE_COMPONENT, { url })
